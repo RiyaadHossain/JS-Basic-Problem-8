@@ -1,7 +1,7 @@
-// 1.Write a Function which outputs the sum of a input number using 'recursion'. 
- 
-function sumRecursion(n){
-  if(n <= 1){
+// 1.Write a Function which outputs the sum of a input number using 'recursion'.
+
+function sumRecursion(n) {
+  if (n <= 1) {
     return 1;
   }
 
@@ -13,7 +13,7 @@ let sumResult = sumRecursion(5);
 
 // Explanation:
 
-  /* sumRecursion(5) = return n + sumRecursion(n - 1)
+/* sumRecursion(5) = return n + sumRecursion(n - 1)
      5 + sumRecursion(4)
      5 + 4 + sumRecursion(3)      
      5 + 4 + 3 + sumRecursion(2)      
@@ -22,12 +22,10 @@ let sumResult = sumRecursion(5);
      
  */
 
+// 2.Write a Function which outputs the Factorial of a input number using 'recursion'.
 
-
-// 2.Write a Function which outputs the Factorial of a input number using 'recursion'. 
-
-function multiplyRecursion(n){
-  if(n <= 1){
+function multiplyRecursion(n) {
+  if (n <= 1) {
     return 1;
   }
 
@@ -36,25 +34,19 @@ function multiplyRecursion(n){
 
 // console.log(multiplyRecursion(5));
 
-
-
-
-
-
 // 3.Search some specific Products from an Array of total Products
 
 let allProducts = [
-  {name: 'Apple Watch', price: 3400},
-  {name: 'Asus Laptop', price: 14200},
-  {name: 'Xiaomi Phone', price: 14000},
-  {name: 'Samsung Watch', price: 4200},
-  {name: 'Lenevo Laptop', price: 8400}
-]
+  { name: "Apple Watch", price: 3400 },
+  { name: "Asus Laptop", price: 14200 },
+  { name: "Xiaomi Phone", price: 14000 },
+  { name: "Samsung Watch", price: 4200 },
+  { name: "Lenevo Laptop", price: 8400 },
+];
 
-function search(products, searchKey){
-  let result = []
-  for(const x of products){
-
+function search(products, searchKey) {
+  let result = [];
+  for (const x of products) {
     // The Following method little bit tricky
     if (x.name.includes(searchKey)) {
       result.push(x.name);
@@ -63,15 +55,11 @@ function search(products, searchKey){
   return result;
 }
 
-let searchResult = search(allProducts, 'Asus Laptop');
+let searchResult = search(allProducts, "Asus Laptop");
 
 // console.log(searchResult);
 
-
-
-
-
-// 4.Usage of "break" & "continue" Statement 
+// 4.Usage of "break" & "continue" Statement
 
 let elecProducts = [
   { name: "Apple Watch", price: 34000 },
@@ -84,48 +72,41 @@ let elecProducts = [
   { name: "Mac Book", price: 96000 },
 ];
 
+// Break Statement
 
-// Break Statement 
-
-function myFunc(allProducts, priceRange){
+function myFunc(allProducts, priceRange) {
   let result = [];
-  
-  for(const x of allProducts){
-    if(x.price < priceRange){
-      
+
+  for (const x of allProducts) {
+    if (x.price < priceRange) {
       // break statement will break the entire loop
       break;
     }
-    result.push(x.name)
+    result.push(x.name);
   }
   return result;
 }
 
 // console.log(myFunc(elecProducts, 30000));
 
+// Continue Statement
 
-
-// Continue Statement 
-
-function myFunc2(allProducts, priceRange){
+function myFunc2(allProducts, priceRange) {
   let result = [];
-  
-  for(const x of allProducts){
-    if(x.price < priceRange){
-      
+
+  for (const x of allProducts) {
+    if (x.price < priceRange) {
       // continue statement will skip the current iteration
       continue;
     }
-    result.push(x.name)
+    result.push(x.name);
   }
   return result;
 }
 
 console.log(myFunc2(elecProducts, 15000));
 
-
-
-// 5. Observe the following Code and its Output 
+// 5. Observe the following Code and its Output
 
 const array = [1, 2, 3, 4, 5, 6, 7];
 
