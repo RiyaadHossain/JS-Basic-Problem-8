@@ -4,7 +4,7 @@ function sumRecursion(n){
   if(n <= 1){
     return 1;
   }
-  // console.log(n);
+
   return n + sumRecursion(n - 1);
 }
 
